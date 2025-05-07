@@ -20,6 +20,20 @@ int main()
     
     fib = 1; //inicia Fibonacci em 1, pois calcula a partir da posição 2
     a = aa = 1; //inicia os dois primeiros com 1
+    //usando o laço while
+    int i = 2;
+    while (i<p) {
+        fib = a + aa; //calcula Fibonacci
+        
+        //atualiza os anteriores para o próximo cálculo
+        aa = a;
+        a = fib;
+        
+        //cout<<fib<<" ";
+        i = i + 1; //incrementa i
+    }
+    /*
+    //usando o laço for
     for (int i=2; i<p; i++) {
         fib = a + aa; //calcula Fibonacci
         
@@ -29,6 +43,7 @@ int main()
         
         //cout<<fib<<" ";
     }
+    */
     
     cout<<"O Fibonacci da posição "<<p<<" é "<<fib;
 
